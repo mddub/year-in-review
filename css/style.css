@@ -1,0 +1,59 @@
+body {
+  padding: 5px;
+  font-size: 13px;
+}
+
+body, li {
+  /* sure would be nice to SASS this away in bootstrap... */
+  line-height: 15px;
+}
+
+a {
+  color: lightblue;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+.category-box {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 5px;
+  max-width: 350px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+h4 {
+  margin: 0 0 0.5em;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  padding: 3px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+.count {
+  margin-left: 5px;
+  color: #999;
+}
+
+.time {
+  font-size: 10px;
+  color: #999;
+}
+
+.note {
+  background: #f3f3f3;
+}
