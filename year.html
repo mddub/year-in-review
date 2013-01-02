@@ -10,22 +10,47 @@
   <body>
 
     <h1>2012 in review</h1>
+    <div id="collection-choices"></div>
+    <div class="clearfix"></div>
 
     <script type="text/mustache" id="category-template">
       <div class="category-box">
         <h4>{{ title }} <span class="count">{{count}}</span></h4>
         <ul>
           {{#events}}
-          <li><span class="time">{{time}}</span> {{{event}}}
+            <li>
+              <span class="time">{{time}}</span>
+              {{#escape}}
+                {{event}}
+              {{/escape}}
+              {{^escape}}
+                {{{event}}}
+              {{/escape}}
+            </li>
           {{/events}}
         </ul>
         <div class="note">{{note}}</div>
       </div>
     </script>
 
+    <script type="text/mustache" id="col-choice-template">
+      <ul>
+        {{#cols}}
+        <li><a href="#{{.}}">{{.}}</a>
+        {{/cols}}
+      </ul>
+    </script>
+
     <script src="js/jquery-1.8.3.min.js"></script>
     <script src="js/mustache.js"></script>
-    <script src="data.js"></script>
+
+    <script language="javascript">
+      window.Review = {};
+    </script>
+    <script src="data/summary.js"></script>
+    <script src="data/comments.js"></script>
+    <script src="data/commits.js"></script>
+
     <script src="js/view.js"></script>
   </body>
 

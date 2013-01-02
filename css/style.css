@@ -13,47 +13,61 @@ a {
 }
 
 h1 {
+  display: inline-block;
   font-size: 30px;
+}
+
+#collection-choices {
+  display: inline-block;
+}
+
+#collection-choices ul {
+  margin: 0 0 0 5px;
+}
+
+#collection-choices li {
+  display: inline-block;
+  margin-left: 20px;
+  font-size: 18px;
 }
 
 .category-box {
   border: 1px solid #ccc;
   padding: 10px;
   margin: 5px;
-  max-width: 350px;
   display: inline-block;
   vertical-align: top;
 }
 
-h4 {
+.category-box h4 {
   margin: 0 0 0.5em;
 }
 
-ul {
+.category-box ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-li {
+.category-box li {
   padding: 3px 0;
   border-bottom: 1px solid #ddd;
 }
 
-li:last-child {
+.category-box li:last-child {
   border-bottom: none;
 }
 
-.count {
-  margin-left: 5px;
+.category-box .count {
+  margin-left: 25px;
   color: #999;
 }
 
-.time {
+.category-box .time {
   font-size: 10px;
   color: #999;
 }
 
-.note {
+.category-box .note {
   background: #f3f3f3;
 }

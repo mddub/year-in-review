@@ -1,2 +1,2 @@
-data.js : data.yaml
-	python yaml_to_json.py data.yaml > data.js
+data/summary.js : data/summary.yaml
+	python yaml_to_json.py data/summary.yaml > data/summary.js

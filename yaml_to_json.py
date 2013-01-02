@@ -1,8 +1,21 @@
+import os
 import sys
 
 import simplejson
 import yaml
 
-yaml_in = yaml.load(open(sys.argv[1]).read())
+file_name = sys.argv[1]
 
-print 'window.DATA = %s;' % simplejson.dumps(yaml_in)
+yaml_in = yaml.load(open(file_name).read())
+
+var_name = os.path.split(file_name)[-1].split('.')[0]
+
+result = []
+for dataset in yaml_in:
+    # should only be one key/val
+    result.append({
+        'title': dataset.keys()[0],
+        'entries': dataset.values()[0],
+    })
+
+print 'window.Review.%s = %s;' % (var_name, simplejson.dumps(result))
