@@ -53,7 +53,10 @@ var drawCollection = function(colName) {
   var collection = window.Review[colName];
   $('.category-box').remove();
   $.each(collection, function(i, dataset) {
-    $('body').append(categoryBoxFromData(dataset));
+    var shortest = $('.category-columns .span4').toArray().reduce(function(last, current) {
+      return $(current).height() < $(last).height() ? current : last;
+    });
+    $(shortest).append(categoryBoxFromData(dataset));
   });
 };
 
