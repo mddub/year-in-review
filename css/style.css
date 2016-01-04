@@ -37,6 +37,7 @@ h1 {
   margin: 5px;
   display: inline-block;
   vertical-align: top;
+  position: relative;
 }
 
 .category-box h4 {
@@ -70,4 +71,54 @@ h1 {
 
 .category-box .note {
   background: #f3f3f3;
+}
+
+.months-container {
+  display: inline-block;
+  width: 120px;
+}
+
+.category-box .months-container {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.months-container div {
+  display: inline-block;
+  float: left;
+  height: 12px;
+  width: 10px;
+}
+
+.month-0 {
+  background: #f0f0f0;
+}
+
+.month-1 {
+  background: #bdbdbd;
+}
+
+.month-2 {
+  background: #969696;
+}
+
+.month-3, .month-4, .month-5, .month-6, .month-7 {
+  background: #525252;
+}
+
+.month-rows {
+  display: none;
+}
+
+.month-row td {
+  padding: 3px 10px;
+  font-size: 18px;
+}
+
+.toggle-table-link {
+  display: inline-block;
+  clear: both;
+  margin: 1em 10px 0;
+  font-size: 18px;
 }

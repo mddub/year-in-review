@@ -13,8 +13,31 @@
     <div id="collection-choices"></div>
     <div class="clearfix"></div>
 
+    <div class="category-boxes"></div>
+    <table class="month-rows"></table>
+
+    <a class="toggle-table-link" href="javascript:;">table</a>
+
+    <script type="text/mustache" id="month-row-template">
+      <tr class="month-row">
+        <td>{{ title }}</td>
+        <td>
+          <div class="months-container">
+            {{#months}}
+              <div class="month-{{.}}"></div>
+            {{/months}}
+          </div>
+        </td>
+      </tr>
+    </script>
+
     <script type="text/mustache" id="category-template">
       <div class="category-box">
+        <div class="months-container">
+          {{#months}}
+            <div class="month-{{.}}"></div>
+          {{/months}}
+        </div>
         <h4>{{ title }} <span class="count">{{count}}</span></h4>
         <ul>
           {{#events}}
