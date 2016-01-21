@@ -1,7 +1,7 @@
+import json
 import os
 import sys
 
-import simplejson
 import yaml
 
 file_name = sys.argv[1]
@@ -18,4 +18,4 @@ for dataset in yaml_in:
         'entries': dataset.values()[0],
     })
 
-print 'window.Review.%s = %s;' % (var_name, simplejson.dumps(result))
+print 'window.Review.%s = %s;' % (var_name, json.dumps(result))
